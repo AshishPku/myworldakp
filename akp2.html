@@ -1,147 +1,346 @@
+<!-- ctrl+n to create a new uname file in vscode -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        myworldakp</title>
-    <link rel="shortcut icon" href="/akplogo1.png" type="image/x-icon">
+    <title>myworldakp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" />
+    <!-- style for popupwindow -->
     <style>
-        .container {
-            background-color: lightgreen;
-            width: 100%;
-            overflow: auto;
-            align-items: center;
-
-
-        }
-
-        a {
-            border: 1px solid black;
-
-        }
-
-        .container a:hover {
-            background-color: pink;
-
-        }
-        #akp100{
-            background-color: darkgoldenrod;
-            border: 1px dotted black;
-            border-radius: 5px;
-            width: 100%;
-            height: 30px;
-            text-align: center;
-        }
-        #akp102{
-            border: 1px solid black;
-            border-radius: 6px;
-            background-color: green;
-            overflow: auto;
-            padding: 2px;
-            color: white;
-        }
-        #akp103{
-            background-color: rgb(134, 134, 102);
-            border: 1px solid black;
-            border-radius: 7px;
-            width: 100%;
-            height: 1000px;
-        }
-        .akpc1{
-            width: 370px;
-            height: 400px;
-        }
+      .popup {
+        display: none;
+        border-radius: 12px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgb(96, 109, 255);
+        padding: 1rem;
+        border: 1px solid gray;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        z-index: 9999;
+      }
+      .popup1 {
+        display: none;
+        border-radius: 12px;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid gray;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        z-index: 9999;
+      }
     </style>
+    <!-- style for popupwindow close -->
+
 </head>
 
-<body style="background-color:lightyellow;">
-    <div class="container">
-        <a style="box-sizing: border-box;" href="http://www.google.com" target="_blank"><i class="fa fa-search"></i></a>
-        <a href="http://www.youtube.com" target="_blank"> <i class="fa fa-youtube"></i></a>
-        <a href="http://www.facebook.com" target="_blank"> <i class="fa fa-facebook"></i></a>
-        <a href="http://www.linkedin.com" target="_blank"> <i class="fa fa-linkedin"></i></a>
-        <a href="http://www.instagram.com" target="_blank"> <i class="fa fa-instagram"></i></a>
-        <a href="http://www.yahoo.com" target="_blank"> <i class="fa fa-yahoo"></i></a>
-        <a href="http://www.twitter.com" target="_blank"> <i class="fa fa-twitter"></i></a>
-        <a href="http://www.amazon.com" target="_blank"> <i class="fa fa-amazon"></i></a>
-        <a href="http://www.flipkart.com" target="_blank"> <i class="fa fa-globe"></i></a>
-        <a href="http://www.github.com" target="_blank"> <i class="fa fa-github"></i></a>
-        <a href="http://www.apple.com" target="_blank"> <i class="fa fa-apple"></i></a>
-        <a href="http://www.spotify.com" target="_blank"> <i class="fa fa-spotify"></i></a>
-        <a href="http://www.chrome.com" target="_blank"> <i class="fa fa-chrome"></i></a>
-
-
-
-    </div>
-    <h2
-        style="background-color: lightgreen; color: black; border: 1px solid black; border-radius: 5px; text-align: center;">
-        !! WELCOME !! </h2>
-    <div>
-        <ol>
-            <li>So ,this my first website </li>
-            <li> You should not laugh after looking my websites as this is very awkward!!</li>
-            <li>My websites contains a form which you have to fill so that you enter into futher in my websites </li>
-            <li> There are lots of link here you can go by just one click </li>
-            <li>after filling the form and submission you can read some quotes which are very famous!!</li>
-            <li> please give me the feedback of my website (i.e. how its look like??) </li>
-
-        </ol>
-    </div>
-    <img src="/akplogo1.png" alt="" ; align="center" ; height="200px" width="200px" ; style="margin-left: 400px; overflow:auto;"> <br>
-    <a  href="http://www.alamy.com" target="_blank">Click here to see 3D photos and video's</a>
-    <h2 style="border: 2px solid black ; border-radius: 5px; text-align: center;">Fill the form!</h2>
-    <form action="#">
-        <div> Full Name: <input type="text"></div> <br>
-        <div>
-            Age: <input type="number">
+<body>
+  <!-- nav bar -->
+    <nav class="bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+            <div class="flex items-center">
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+              <a href="/about.html"  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+              <a href="/contact.html"  class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+              <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">History</a>
+            </div>
+            <div class="flex items-center">
+              <button  class="bg-gray-700 hover:bg-gray-600 text-white px-3 py-2 rounded-md text-sm font-medium mr-2" onclick="loginform()">Log In</button>
+              <button  class="bg-gray-300 hover:bg-white text-gray-800 px-3 py-2 rounded-md text-sm font-medium" onclick="signinform()">Sign Up</button>
+            </div>
+            <div class="flex sm:hidden">
+              <button class="text-gray-300 hover:text-white focus:outline-none focus:text-white" aria-label="Toggle menu">
+                <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
+                  <path fill-rule="evenodd" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-        <br>
-        <div>Email-ID:
-            <input type="email">
+      </nav>
+      <!-- nav closed -->
+   
+       <!-- section  1 -->
+        <section class="bg-gray-100 py-12">
+          <h1 class="font-extrabold">Electronics</h1>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="http://www.google.com" target="_blank">
+                    <img src="/myworldakpProject/static/image/amplifier.jpg" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2"><a href="http://www.google.com" target="_blank">Resistor</a></h3>
+                    <p>About resistor-resistors have very common functions that you know about it very well.......
+                      
+                    </p>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/myworldakpProject/static/image/amplifier.jpg" alt="Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Transistor</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/dcmotor.jpg" alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2 ">About Motors</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/pexels-kindel-media-9028874.jpg" alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Sensors</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section1 closed  -->
+          <!-- signin form  -->
+          <div class="popup" id="popup">
+            <form class="max-w-md mx-auto my-8">
+              <h1 class="font-extrabold items-center px-8 mx-auto text-2xl text-purple-800">SignUp-To create and Account</h1>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="mobile">
+                  Mobile Number
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="text" placeholder="Enter your mobile number">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="dob">
+                  Date of Birth
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date" placeholder="Enter your date of birth">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="skills">
+                  Your Skills
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="skills" rows="3" placeholder="Enter your skills"></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Sign Up
+                </button>
+              </div>
+            </form>  
+            <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="hidePopup()">Close</button>
+          </div>
+          <!-- script  -->
+          <script>
+            function signinform() {
+              document.getElementById("popup").style.display = "block";
+            }
+            function hidePopup() {
+              document.getElementById("popup").style.display = "none";
+            }
+          </script>
+          <!-- script close -->
+          <!-- sigin form close  -->
+          <!-- log in form   -->
+          <div class="popup1" id="popup1">
+            <form class="max-w-md mx-auto my-8">
+              <h1 class="font-extrabold items-center px-8 mx-auto text-2xl text-purple-800">SignUp-To create and Account</h1>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="name">
+                  Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Enter your name">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="mobile">
+                  Mobile Number
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mobile" type="text" placeholder="Enter your mobile number">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="dob">
+                  Date of Birth
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="dob" type="date" placeholder="Enter your date of birth">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">
+                  Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Enter your email address">
+              </div>
+              <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="skills">
+                  Your Skills
+                </label>
+                <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="skills" rows="3" placeholder="Enter your skills"></textarea>
+              </div>
+              <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                  Sign Up
+                </button>
+              </div>
+            </form>  
+            <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="hidePopup1()">Close</button>
+          </div>
+          <!-- script  -->
+          <script>
+            function loginform() {
+              document.getElementById("popup1").style.display = "block";
+            }
+            function hidePopup1() {
+              document.getElementById("popup1").style.display = "none";
+            }
+          </script>
+          <!-- script close -->
+
+          <!-- log in form closed  -->
+          <!-- section 2 -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images//pexels-miguel-á-padriñán-343457 (1).jpg" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Analog communication</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/amplifier.jpg" alt="Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Amplifier</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/pexels-pixabay-39290 (1).jpg" alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Arduino</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/pexels-pok-rie-1432675.jpg" alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Image 4 Title</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section 2 closed  -->
+          <!-- section 3 -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images//pexels-miguel-á-padriñán-343457 (1).jpg" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Analog communication</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/operating system.jpg" alt="Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Operating System</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/pexels-pixabay-39290 (1).jpg" alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Applied Electronics</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/pexels-pok-rie-1432675.jpg" alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Controls System</h3>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section 2 closed  -->
+          
+          <!-- section 4 -->
+        <section class="bg-gray-100 py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/pexels-joão-vítor-heinrichs-1856183.jpg" alt="Image 1" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Bermuda triangle</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/myworldakpProject/image/pexels-spacex-23789.jpg" alt=" Image 2" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">NASA</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="#">
+                    <img src="/images/com graphics.jpg" alt="Image 3" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Computer Graphics</h3>
+                  </a>
+                </div>
+                <div class="bg-white p-4 rounded shadow-md">
+                  <a href="/pdf's/Carbon Nanotubes .pdf" >
+                    <img src="/images/javascript.jpg" alt="Image 4" class=" rounded-2xl w-full h-auto">
+                    <h3 class="text-gray-800 hover:text-purple-600 font-bold text-xl mt-2">Javascript</h3>
+                    <p><strong>Javascript -</strong> is the language of web browsers which help to build our websites responsive and functionable to the user......</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- section 4 closed -->
+          
+    <!-- <footer> -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="xl:flex xl:items-center xl:justify-between">
+                <div class="xl:flex-1 xl:mr-4">
+                    <h3 class="text-white hover:text-purple-800 font-bold text-2xl mb-2">Myworldakp</h3>
+                    <p class="text-gray-400 text-sm">This is my website mainly design for the uploading various
+                        documents. </p>
+                </div>
+                <div class="mt-8 xl:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4 bg-blue-900 px-3 rounded"><i
+                            class="fa fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-800 hover:bg-white rounded px-2  mr-4"><i
+                            class="fa fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-pink-900 hover:bg-white rounded px-2 mr-4"><i
+                            class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 xl:flex xl:items-center xl:justify-between">
+                <p class="text-gray-400 text-sm xl:text-left">© 2023 My Website. All rights reserved.</p>
+                <div class="mt-4 xl:mt-0 xl:flex-1 xl:text-right">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Terms</a>
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Privacy</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
         </div>
-        <br>
-        <div>mobile number: <input type="number"></div> <br>
-        <div> Gender: <select name="gender" id="gender">
-                <option value="male "> male
-
-                </option>
-                <option value="female"> female</option>
-                <option value="other"> other</option>
-            </select></div>
-        <br>
-        <div>
-            Date of submission of form: <input type="date">
-
-        </div>
-        <span style="color:red; border: 1px solid black ; border-radius: 10px;"> Are you sure to submit the form??
-            :<input type="checkbox"> </span>
-        <br>
-        <br>
-        <div > <input id="akp102" type="submit"></div>
-        <br>
-        <br>
-
-    </form>
-    <button onclick="window.alert('Click ok')"> reset</button>
-    <br>
-    <br>
-    <div id="akp100">
-        Collection of photos</div>
-        <br>
-        <br>
-    <div id="akp103">
-        <img class="akpc1" src="/pexels-johannes-plenio-1105379.jpg" alt="">
-        <img class="akpc1" src="/pexels-pixabay-270348.jpg" alt="">
-        <img class="akpc1" src="/pexels-pixabay-163125.jpg" alt="">
-        <img class="akpc1" src="/pexels-pixabay-163073.jpg" alt="">
-        <img class="akpc1" src="/pexels-miguel-á-padriñán-343457.jpg" alt="">
-        <img class="akpc1" src="/pexels-miguel-á-padriñán-1591061.jpg" alt="">
-
-    </div>
+    </footer>
+    <!-- footer closed  -->
+   >
 </body>
 
 </html>
